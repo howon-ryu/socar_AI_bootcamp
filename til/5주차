@@ -1,0 +1,33 @@
+til 5주차
+
+
+1. 배운점
+
+
+* backward pass
+
+- gradient의 반대 방향으로 parameter를 업데이트 하는과정
+  
+  loss function이 줄어들도록 업데이트!
+  
+  
+* optimizer
+
+- 정답을 찾아가는 방법, 학습하는 방식, 최적화 방식
+
+* batch normalization, dropout
+
+-dropout : 모델을 forward pass를 할때 parameter를 마스킹을 하여 모델 전체의 parameter중 일부를 이용해서라도 좋은 성능을 얻도록하는 방식
+
+- batch normalization : batch가 들어왔을때 각각의 feature별로 normalize를 하여 원하는 분포를 만들어줌
+=> 여러번 학습을 해도 비슷한 성능을 나오게 해줌, 학습속도 개선
+
+
+
+2. 느낀점
+
+이번 5주차 수업을 통하여 mlp 모델로 mnist를 학습하는 과정과 방법에 대하여 배웠다.
+작년 학교 수업에서는 chain rule과 one-hot encoding, softmax등을 직접 구현하여 '학습'을 성공하는데 초점을 두었는데,
+이번 5주차 강의를 통해서 python 라이브러리의 다양한 함수와 알고리즘을 이용하면, 
+보다 효율적이고 정확한 결과를 얻을 수 있다는 점이 놀라웠다.
+
