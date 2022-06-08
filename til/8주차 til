@@ -1,0 +1,16 @@
+[8-2] 
+딥러닝의 경우 학습에 많은 시간과 비용이 필요
+
+그래서 fine-tuning사용(현재의 문제가 기존 학습 모델과 유사할때 사용)
+그래서 이미 학습된 모델 parameter를 initial 로 해서 현재 문제에 맞게 추가학습을 하는것!
+=>작은 learning rate(1/10)를 사용하여 기존 parameter를 변화시키지 않도록 함
+
+fine-tuning의 적용 방법
+1. 모델 전체 업데이트
+2. 앞부분은 고정(freeze),뒷부분만 업데이트
+
+ensemble-> 모델들의 예측을 합쳐서 강력한 모델을 생성
+합치는 방법 :
+hard voting(더 확률이 높은것 선택), soft voting(더한후 나누기), weighted voting(가중치 방식)
+
+모델의 종류 : alexnet, vgg, resnet
