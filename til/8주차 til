@@ -36,3 +36,33 @@ self-supervised leaning을 통해 학습시킨 모델을 pretrained network 로 
 
 좋은 feature extractor를 뽑았는지 확인하는 방법은?
 => self-supervised로 pretrain된 부분을 freeze한 채로 label이 있는 데이터에 대해 학습하여 성능을 측정
+
+[8-4]
+인공신경망의 예측을 왜 해석해야 할까?
+- 인공신경망의 판단의 근거를 알수가 없음-> 인공신경망이 브레이크를 output을 했는데 왜?
+- 사람이 생각하지 못한 인공신경망의 판단-> 알파고
+
+그러나 아직까지 인공지능의 예측을 명쾌하게 해석하는 방법은 없음
+
+grad-cam
+cnn을 기준으로 어떤 spatial한 위치가 해당 node에 영향을 많이 줬는지 표시
+feature 가 class node와 얼마나 영향이 있나? 를 측정
+
+grad-cam응용
+nurse와 doctor를 구분할때 둘다 nurse로 나와서 왜 그런지를 보면 grad-cam이 확인한 영역이 사람 얼굴과 머리를 보고
+판단한것! 즉 nurse와 doctor의 데이터가 남자여자가 구분이 안되어 있어서 인공지능은 이렇게 파악한것!
+그래서 성비를 재구성하여 학습을 하니까 얼굴이나 머리스타일이 아닌 청진기 등으로 doctor와 nurse로 구분함
+
+grad-cam=>classification label 만으로 segmentation을 수행 가능
+
+[8-5]
+gan(generative adversarial networks) 
+진짜 같은 데이터를 생성해내는 generative model(생성 모델)
+
+두개의 네트워크
+1. generator : 랜덤 노이즈 벡터로부터 데이터 생성
+2. discriminator: 입력 이미지가 실제인지 생성인지 판별
+ 
+
+generator가 만들어낸 이미지가 discriminator가 구분하지 못할 정도로 계속 만들게 되면
+generator의 성능이 점점 상승하고 구분하지 못하는 이미지가 생성될것!
