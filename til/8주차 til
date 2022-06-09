@@ -66,3 +66,13 @@ gan(generative adversarial networks)
 
 generator가 만들어낸 이미지가 discriminator가 구분하지 못할 정도로 계속 만들게 되면
 generator의 성능이 점점 상승하고 구분하지 못하는 이미지가 생성될것!
+
+[8-6,7]
+
+rnn : 순차적 데이터 처리에 특화된 인공신경망
+언어번역, 주가 예측, 로봇 컨트롤(순차적인 예측이 필요한 경우)
+
+
+rnn의 한계로 인한 attention model의 등장(input이 길어진다면 담을 수 있는 정보의 한계가 생김)
+self-attention을 통해 각 위치의 feature를 얻음
+input 마다 vector를 만들어서 서로 비교 하고 attention을 구함
